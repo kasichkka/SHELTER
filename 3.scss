@@ -1,0 +1,210 @@
+$pink-main: #FFB6C1;
+$pink-hover: #FFA0B0;
+$pink-border: #FFD1DC;
+$blue-bg: #D1E9FF;
+$blue-alice: #F0F8FF;
+$dark-blue-text: #1B4F72;
+$text-main: #333;
+$text-muted: #666;
+$white: #ffffff;
+
+@mixin flex-center-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin transition-standard {
+    transition: 0.3s ease;
+}
+
+body {
+    background-color: $blue-alice;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    color: $text-main;
+}
+.main-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 40px 20px;
+}
+.header {
+    @include flex-center-between;
+    padding: 15px 5%;
+    background-color: $blue-bg;
+    border-bottom: 2px solid $pink-border;
+
+    .logo-group {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .logotip-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid $white;
+            object-fit: cover;
+        }
+
+        .casper {
+            font-family: 'SigmarOne-Regular', sans-serif;
+            font-size: 28px;
+            color: $pink-main;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .nav-menu ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin-left: 30px;
+
+            a {
+                text-decoration: none;
+                color: $dark-blue-text;
+                font-weight: 600;
+                font-size: 18px;
+                @include transition-standard;
+
+                &:hover {
+                    color: $pink-main;
+                }
+            }
+        }
+    }
+}
+
+.info-side {
+    flex: 2;
+
+    h1 { color: $text-main; font-size: 2.5rem; margin-bottom: 10px; }
+    .intro { font-size: 1.2rem; color: $text-muted; margin-bottom: 30px; }
+
+    .help-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        .help-item {
+            background: $white;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid $pink-main;
+
+            h3 { margin-top: 0; color: #444; }
+        }
+    }
+}
+
+.form-side {
+    flex: 1;
+
+    .sticky-form-container {
+        background: $white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 40px;
+
+        .input-group { 
+            margin-bottom: 15px;
+            
+            label { 
+                display: block; 
+                margin-bottom: 5px; 
+                font-weight: 600; 
+                font-size: 0.9rem; 
+            }
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid $blue-alice;
+            border-radius: 10px;
+            box-sizing: border-box;
+            @include transition-standard;
+
+            &:focus {
+                border-color: $pink-main;
+                outline: none;
+            }
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: $pink-main;
+            color: $white;
+            border: none;
+            padding: 14px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            @include transition-standard;
+
+            &:hover { background-color: $pink-hover; }
+        }
+    }
+}
+
+.site-footer {
+    background-color: $blue-bg;
+    color: $dark-blue-text;
+    padding: 30px 5%;
+    text-align: center;
+
+    .socials {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        a {
+            color: $pink-main;
+            text-decoration: none;
+            font-weight: bold;
+            @include transition-standard;
+            
+            &:hover { opacity: 0.8; }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+
+        .nav-menu ul {
+            flex-direction: column;
+            gap: 10px;
+            padding: 0;
+            margin-top: 15px;
+
+            li { margin-left: 0; }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main-layout { 
+        flex-direction: column; 
+    }
+    .info-side .help-grid { 
+        grid-template-columns: 1fr; 
+    }
+    .form-side { 
+        order: -1;
+    }
+}

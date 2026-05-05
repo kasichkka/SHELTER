@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как нам помочь?</title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="3.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo-group">
+        <img class="logotip-img" src="фото/logo.svg" alt="Логотип">
+        <a href="index.html" class="casper">CASPER</a>
+        <label class="switch">
+  <input type="checkbox" id="theme-toggle">
+  <span class="slider round"></span>
+</label>
+    </div>
+
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="pg1.html">О нас</a></li>
+            <li><a href="pg3.html">Каталог</a></li>
+            <li><a href="pg2.html" class="active" style="color: #FFB6C1;">Как нам помочь?</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="main-layout">
+    <section class="info-side">
+        <h1>Как нам помочь</h1>
+        <p class="intro">Ваше участие — это шанс на новую жизнь для наших подопечных.</p>
+
+        <div class="help-grid">
+            <div class="help-item">
+                <h3>💰 Финансовая помощь</h3>
+                <p>Ежемесячные пожертвования помогают нам закупать корм и оплачивать лечение. Даже 10 рублей имеют значение.</p>
+            </div>
+            <div class="help-item">
+                <h3>📦 Вещи и корм</h3>
+                <p>Мы всегда рады сухому корму, пеленкам и игрушкам. Список нужных марок можно уточнить у администратора.</p>
+            </div>
+            <div class="help-item">
+                <h3>🐕 Волонтерство</h3>
+                <p>Приходите гулять с собаками или помогите нам с перевозкой животных в ветклиники. Нам очень нужны фотографы, чтобы делать красивые снимки подопечных для сайта, и просто ласковые руки для социализации кошек.</p>
+            </div>
+            <div class="help-item">
+                <h3>📢 Инфо-поддержка</h3>
+                <p>Просто расскажите о нас друзьям или сделайте репост нашей анкеты в соцсетях. Ваш лайк или история в Instagram могут стать тем самым шансом, благодаря которому хвостик найдет свой постоянный дом.</p>
+            </div>
+        </div>
+    </section>
+
+    <aside class="form-side">
+        <div class="sticky-form-container">
+            <div id="formContent">
+                <h2>Стать помощником / приютить животное</h2>
+                <form id="helpForm">
+                    <div class="input-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" required placeholder="Иван">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" id="email" required placeholder="example@mail.com">
+                        <small class="hint">Обязательно наличие символа @</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Как вы хотите помочь? / Какое животное приютить?</label>
+                        <textarea id="message" rows="3" placeholder="Например: хочу гулять с собаками"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </aside>
+</div>
+<footer class="site-footer">
+  <div class="footer-content">
+    <h3>Касич Анастасия</h3>
+    <p>Создатель приюта для животных.</p>
+    
+    <ul class="socials">
+      <li><a href="casper@email.com">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+       style="vertical-align: middle; margin-right: 5px; transform: translateY(1px);">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+  </svg>
+        casper@email.com
+      </a></li>
+      <li><a href="casper">Telegram: casper</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Все права защищены</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+
+</html>

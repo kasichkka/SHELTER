@@ -1,0 +1,224 @@
+body {
+    background-color: #F0F8FF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%; 
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #D1E9FF;
+    border-bottom: 2px solid #FFD1DC;
+}
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logotip-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+.casper {
+    font-family: 'SigmarOne-Regular', sans-serif;
+    font-size: 28px;
+    color: #FFB6C1;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-menu ul li {
+    margin-left: 30px;
+}
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #1B4F72;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.nav-menu ul li a:hover {
+    color: #FFB6C1;
+}
+.catalog-container {
+    padding: 40px 0;
+    min-height: 100vh;
+}
+.page-title-aligned {
+    font-family: 'SigmarOne-Regular', sans-serif;
+    color: #1B4F72;
+    margin: 40px 0 30px 0;
+    text-align: left;
+    font-size: 32px;
+}
+.filter-section {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+.filter-btn {
+    background-color: white;
+    border: 2px solid #D1E9FF;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #1B4F72;
+    transition: 0.3s;
+}
+.filter-btn.active, .filter-btn:hover {
+    background-color: #FFB6C1 !important;
+    border-color: #FFB6C1 !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+}
+.animals-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding-bottom: 60px;
+}
+.animal-card {
+    background: white;
+    border-radius: 40px; 
+    padding: 35px 20px;
+    text-align: center;
+    border: 1px solid #E8F4FF;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+.animal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+}
+.animal-photo {
+    width: 220px; 
+    height: 220px;
+    border-radius: 35px; 
+    overflow: hidden;
+    border: 1px solid #D1E9FF; 
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.animal-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.animal-info h3 {
+    margin: 0;
+    color: #1B4F72;
+    font-size: 22px;
+    font-weight: 700;
+}
+.name {
+    font-weight: bold;
+}
+.animal-info p {
+    color: #FFB6C1;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 0 15px 0;
+}
+.tag {
+    font-size: 11px;
+    color: #1B4F72;
+    background: #F0F8FF;
+    padding: 5px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.site-footer {
+    background-color: #D1E9FF;
+    color: #1B4F72;
+    padding: 30px 5%;
+    text-align: center;
+}
+.socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.socials a {
+    color: #FFB6C1;
+    text-decoration: none;
+    font-weight: bold;
+}
+@media (max-width: 1100px) {
+    .animals-grid {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: stretch; 
+        gap: 20px;
+    }
+}
+@media (max-width: 850px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        margin-top: 15px;
+    }
+    .nav-menu ul li {
+        margin-left: 0;
+    }
+    .page-title-aligned {
+        text-align: center;
+    }
+    .filter-section {
+        justify-content: center;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 0 10px; 
+    }
+
+    .animals-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+    .animal-card {
+        width: 100%; 
+        max-width: none; 
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    .animal-photo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%; 
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <animal id="1" type="cat">
+        <name>Дымок</name>
+        <description>Ласковый</description>
+        <tag>Кот</tag>
+        <image>фото/лог1.webp</image>
+    </animal>
+    <animal id="2" type="dog">
+        <name>Пончик</name>
+        <description>Веселый</description>
+        <tag>Пёс</tag>
+        <image>фото/лог11.avif</image>
+    </animal>
+    <animal id="3" type="cat">
+        <name>Персик</name>
+        <description>Спит весь день</description>
+        <tag>Кот</tag>
+        <image>фото/лог3.jpg</image>
+    </animal>
+    <animal id="4" type="dog">
+        <name>Снежок</name>
+        <description>Очень пушистый</description>
+        <tag>Пёс</tag>
+        <image>фото/лог10.jpg</image>
+    </animal>
+    <animal id="5" type="cat">
+        <name>Барон</name>
+        <description>Уютный</description>
+        <tag>Кот</tag>
+        <image>фото/лог5.jpg</image>
+    </animal>
+    <animal id="6" type="dog">
+        <name>Рекс</name>
+        <description>Знает команды</description>
+        <tag>Пёс</tag>
+        <image>фото/лог12.jpg</image>
+    </animal>
+    <animal id="7" type="cat">
+        <name>Луна</name>
+        <description>Любит бегать</description>
+        <tag>Кошка</tag>
+        <image>фото/лог9.webp</image>
+    </animal>
+    <animal id="8" type="dog">
+        <name>Стелла</name>
+        <description>Проницательная</description>
+        <tag>Собака</tag>
+        <image>фото/лог13.jpg</image>
+    </animal>
+</catalog>

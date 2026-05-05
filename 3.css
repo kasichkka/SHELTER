@@ -1,0 +1,188 @@
+body {
+  background-color: #F0F8FF;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  color: #333;
+}
+
+.main-layout {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: #D1E9FF;
+  border-bottom: 2px solid #FFD1DC;
+}
+.header .logo-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header .logo-group .logotip-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .logo-group .casper {
+  font-family: "SigmarOne-Regular", sans-serif;
+  font-size: 28px;
+  color: #FFB6C1;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.header .nav-menu ul {
+  display: flex;
+  list-style: none;
+}
+.header .nav-menu ul li {
+  margin-left: 30px;
+}
+.header .nav-menu ul li a {
+  text-decoration: none;
+  color: #1B4F72;
+  font-weight: 600;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+.header .nav-menu ul li a:hover {
+  color: #FFB6C1;
+}
+
+.info-side {
+  flex: 2;
+}
+.info-side h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.info-side .intro {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+.info-side .help-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.info-side .help-grid .help-item {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid #FFB6C1;
+}
+.info-side .help-grid .help-item h3 {
+  margin-top: 0;
+  color: #444;
+}
+
+.form-side {
+  flex: 1;
+}
+.form-side .sticky-form-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 40px;
+}
+.form-side .sticky-form-container .input-group {
+  margin-bottom: 15px;
+}
+.form-side .sticky-form-container .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.form-side .sticky-form-container input, .form-side .sticky-form-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #F0F8FF;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+.form-side .sticky-form-container input:focus, .form-side .sticky-form-container textarea:focus {
+  border-color: #FFB6C1;
+  outline: none;
+}
+.form-side .sticky-form-container .submit-btn {
+  width: 100%;
+  background-color: #FFB6C1;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+.form-side .sticky-form-container .submit-btn:hover {
+  background-color: #FFA0B0;
+}
+
+.site-footer {
+  background-color: #D1E9FF;
+  color: #1B4F72;
+  padding: 30px 5%;
+  text-align: center;
+}
+.site-footer .socials {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.site-footer .socials a {
+  color: #FFB6C1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.site-footer .socials a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 850px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin-top: 15px;
+  }
+  .header .nav-menu ul li {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+  .info-side .help-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-side {
+    order: -1;
+  }
+}/*# sourceMappingURL=3.css.map */

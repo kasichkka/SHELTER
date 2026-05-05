@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="4.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-group">
+        <img src="фото/logo.svg" alt="Logo" class="logotip-img">
+        <a href="index.html" class="casper">CASPER</a>
+        <label class="switch">
+  <input type="checkbox" id="theme-toggle">
+  <span class="slider round"></span>
+</label>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="pg1.html">О нас</a></li>
+            <li><a href="pg3.html" class="active" style="color: #FFB6C1;">Каталог</a></li>
+            <li><a href="pg2.html">Как нам помочь?</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="catalog-container">
+    <div class="container">
+        <div class="catalog-header-row">
+            <h1 class="page-title-aligned">Наши подопечные</h1>
+        </div>
+        <div class="filter-section">
+            <button class="filter-btn active" onclick="filterAnimals(event, 'all')">Все лапки</button>
+            <button class="filter-btn" onclick="filterAnimals(event, 'cat')">Котики</button>
+            <button class="filter-btn" onclick="filterAnimals(event, 'dog')">Собачки</button>
+        </div>
+        <div class="animals-grid" id="animalsGrid"></div>
+    </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p class="name">Касич Анастасия</p>
+    <p>Создатель приюта для животных.</p>
+    
+    <ul class="socials">
+      <li><a href="mailto:casper@email.com">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+       style="vertical-align: middle; margin-right: 5px; transform: translateY(1px);">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+  </svg>
+        casper@email.com
+      </a></li>
+      <li><a href="https://t.me/casper">Telegram: casper</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Все права защищены</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
