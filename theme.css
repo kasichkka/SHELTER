@@ -64,3 +64,11 @@ header, footer{
 }
 input:checked + .slider { background-color: #FFB6C1; }
 input:checked + .slider:before { transform: translateX(26px); }
+@media (max-width: 850px) {
+    body.dark-theme .burger-menu span {
+        background-color: var(--text-main) !important;
+    }
+    body.dark-theme .nav-menu {
+        background-color: var(--header-footer-bg) !important;
+    }
+}

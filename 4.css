@@ -174,51 +174,99 @@ body {
         gap: 20px;
     }
 }
+
+
+input.burger-checkbox {
+    display: none !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #1B4F72;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
 @media (max-width: 850px) {
     .header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        position: relative;
+    }
+    .burger-menu {
+        display: flex !important;
+    }
+    .nav-menu {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #D1E9FF;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 99;
     }
     .nav-menu ul {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0;
-        margin-top: 15px;
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 0 !important;
+        margin-top: 0 !important;
+        align-items: center !important;
     }
     .nav-menu ul li {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
+    .burger-checkbox:checked ~ .nav-menu {
+        display: block !important;
+    }
+    .burger-checkbox:checked ~ .burger-menu span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg) !important;
+    }
+    .burger-checkbox:checked ~ .burger-menu span:nth-child(2) {
+        opacity: 0 !important;
+    }
+    .burger-checkbox:checked ~ .burger-menu span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg) !important;
+    }
+
     .page-title-aligned {
-        text-align: center;
+        text-align: center !important;
     }
     .filter-section {
-        justify-content: center;
+        justify-content: center !important;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .animals-grid {
+        grid-template-columns: repeat(2, 1fr) !important; 
+        justify-items: stretch !important;
+        gap: 20px !important;
     }
 }
+
 @media (max-width: 600px) {
-    .container {
-        padding: 0 10px; 
-    }
-
     .animals-grid {
-        grid-template-columns: 1fr; 
-        gap: 15px;
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 25px !important;
+        padding: 0 10px !important;
     }
-
     .animal-card {
-        width: 100%; 
-        max-width: none; 
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-    }
-    .animal-photo {
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%; 
-        max-width: 280px;
-        height: auto;
-        aspect-ratio: 1 / 1;
+        width: 100% !important;
     }
 }
